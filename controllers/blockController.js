@@ -1,7 +1,6 @@
 const db = require('../models');
 const { Op } = require('sequelize');
 
-// GET /api/blocks?page=1&limit=10
 // GET /api/blocks?page=1&limit=10&search=abc
 const getAllBlocks = async (req, res) => {
     try {
