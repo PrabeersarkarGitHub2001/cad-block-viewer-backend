@@ -10,8 +10,9 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 app.use('/uploads', express.static('uploads'));
+ 
 
-app.use('/api/upload', uploadRoutes);
+ app.use('/api/upload', uploadRoutes);
 app.use('/api/blocks', blockRoutes);
 app.get('/', (req, res) => {
   res.send('I am workinh');
