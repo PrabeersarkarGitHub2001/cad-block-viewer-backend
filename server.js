@@ -13,7 +13,9 @@ app.use('/uploads', express.static('uploads'));
 
 app.use('/api/upload', uploadRoutes);
 app.use('/api/blocks', blockRoutes);
-
+app.get('/', (req, res) => {
+  res.send('Hi');
+});
 const PORT = process.env.PORT || 5000;
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT,'0.0.0.0', () => {
